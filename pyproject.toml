@@ -1,0 +1,26 @@
+[project]
+name = "canvaai"
+version = "0.1.0"
+description = "Canva AI Api build with python."
+authors = [
+    {name = "Fahmi XD",email = "fahmixd404@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests (>=2.32.3,<3.0.0)",
+    "curl-cffi (>=0.11.1,<0.12.0)"
+]
+
+[tool.poetry]
+packages = [
+    {include = "canvaai", from = "src"}
+]
+
+[tool.poetry.scripts]
+canvaai = "canvaai.cli:tui"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
